@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7e4900b-ffd5-4866-8315-93763a0c4dde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/log.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/context/ctx_channel.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/main_test.go" afterDir="false" />
     </list>
@@ -69,5 +69,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ip get, logrus added" />
+    <option name="LAST_COMMIT_MESSAGE" value="ip get, logrus added" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="496" y="309" key="Vcs.Push.Dialog.v2" timestamp="1608019899797">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="496" y="309" key="Vcs.Push.Dialog.v2/0.25.1792.1095@0.25.1792.1095" timestamp="1608019899797" />
   </component>
 </project>

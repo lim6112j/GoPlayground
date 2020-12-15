@@ -19,7 +19,7 @@ func init() {
 	log.SetFormatter(&log.JSONFormatter{})
 
 	// Output to stdout instead of the default stderr
-	// Can be any io.Writer, see below for File example
+	// Can be any io.Writer, see below for File context
 	log.SetOutput(os.Stdout)
 
 	// Only log the warning severity or above.
@@ -63,4 +63,7 @@ func TestC(t *testing.T) {
 	localAddr := conn.LocalAddr().(*net.UDPAddr)
 
 	fmt.Println(localAddr.IP)
+}
+func TestContext(t *testing.T) {
+
 }
