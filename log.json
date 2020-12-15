@@ -1,0 +1,8 @@
+{
+  "host": "로컬ip",
+  "notice": "bot_admin",
+  "level": "warning",
+  "msg": "error while decoding",
+  "source": "thecheat_complete.go",
+  "time": "2020-12-15T16:35:47+09:00"
+}
