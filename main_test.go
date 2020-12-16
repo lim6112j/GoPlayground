@@ -3,13 +3,14 @@ package main
 import (
 	"fmt"
 	log "github.com/sirupsen/logrus"
+	"io"
 	"net"
 	"os"
 	"testing"
 )
 
 func TestMain(m *testing.M) {
-	fmt.Println("do before tests")
+	fmt.Println("tests start")
 	val := m.Run()
 	fmt.Println("do after tests")
 	os.Exit(val)
@@ -20,12 +21,20 @@ func init() {
 
 	// Output to stdout instead of the default stderr
 	// Can be any io.Writer, see below for File context
-	log.SetOutput(os.Stdout)
 
 	// Only log the warning severity or above.
 	log.SetLevel(log.WarnLevel)
 }
 func TestLog(t *testing.T) {
+	// 로그를 저장할 파일 설정.
+	fpLog, err := os.OpenFile("logfile.json", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	if err != nil {
+		log.Panicf("logfile open failed => %v", err)
+	}
+	// 파일 닫기를  프로그램 종료시로 지연시킴.
+	defer fpLog.Close()
+	mw := io.MultiWriter(os.Stdout, fpLog)
+	log.SetOutput(mw)
 	fmt.Println("Testing logrus")
 
 	log.WithFields(log.Fields{
