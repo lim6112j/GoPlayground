@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	f()
@@ -16,6 +18,7 @@ func f() {
 	fmt.Println("Calling g.")
 	g(0)
 	fmt.Println("Returned normally from g.")
+
 }
 
 func g(i int) {
