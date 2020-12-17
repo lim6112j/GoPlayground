@@ -23,10 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7e4900b-ffd5-4866-8315-93763a0c4dde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/util/ptintjson.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/httpserver/httpserver.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myutil/a.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/a.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailog/taillog.go" beforeDir="false" afterPath="$PROJECT_DIR$/tailog/taillog.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +93,7 @@
     <MESSAGE value="ip get, logrus added" />
     <MESSAGE value="multiwriter applied to logrus" />
     <MESSAGE value="logrus output ApiWriter made" />
-    <option name="LAST_COMMIT_MESSAGE" value="logrus output ApiWriter made" />
+    <MESSAGE value="simple api server" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple api server" />
   </component>
 </project>
