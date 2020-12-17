@@ -1,4 +1,4 @@
-package myutil
+package util
 
 import (
 	log "github.com/sirupsen/logrus"

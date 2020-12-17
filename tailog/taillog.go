@@ -1,12 +1,42 @@
 package main
 
 import (
-	"../myutil"
+	"../util"
+	"encoding/base64"
+	"fmt"
 	log "github.com/sirupsen/logrus"
 	"io"
+	"net/http"
 	"os"
+	"strings"
+	"time"
 )
 
+type ApiWriter struct {
+}
+
+func (aw *ApiWriter) Write(p []byte) (n int, err error) {
+	logUrl := "https://thecheat.co.kr/thecheat/app/___PutError.php"
+	b64data := base64.StdEncoding.EncodeToString(p)
+	fmt.Println(b64data)
+	dataString := fmt.Sprintf("contents=%s", b64data)
+	req, err := http.NewRequest("POST", logUrl, strings.NewReader(dataString))
+	if err != nil {
+		fmt.Errorf("error while requesting logifile to server : %v", err)
+		return
+	}
+	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+	timeout := time.Duration(20 * time.Second)
+	client := http.Client{Timeout: timeout}
+	resp, err := client.Do(req)
+	if err != nil {
+		fmt.Errorf("file log to server error  => %v", err)
+		return
+	}
+	util.PrintJsonResponse(resp)
+	resp.Body.Close()
+	return len(p), nil
+}
 func init() {
 	// Log as JSON instead of the default ASCII formatter.
 	log.SetFormatter(&log.JSONFormatter{})
@@ -25,7 +55,8 @@ func main() {
 	}
 	// 파일 닫기를  프로그램 종료시로 지연시킴.
 	defer fpLog.Close()
-	mw := io.MultiWriter(os.Stdout, fpLog)
+	aw := &ApiWriter{}
+	mw := io.MultiWriter(os.Stdout, fpLog, aw)
 	log.SetOutput(mw)
 	entry := log.WithFields(log.Fields{
 		"host":    "127.0.0.1",
@@ -35,6 +66,6 @@ func main() {
 	entry.Warn("A walrus appears")
 	entry.Warn("error while decoding")
 	c := make(chan int)
-	go myutil.AFunc(c)
+	go util.AFunc(c)
 	entry.Warnf("channel returns %v", <-c)
 }

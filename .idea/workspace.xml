@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,9 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7e4900b-ffd5-4866-8315-93763a0c4dde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/context/ctx_channel.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/ptintjson.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/main_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myutil/a.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/a.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailog/taillog.go" beforeDir="false" afterPath="$PROJECT_DIR$/tailog/taillog.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,14 +50,30 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable..is.expanded" value="false" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="goland.project.structure" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/tailog" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,12 +93,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ip get, logrus added" />
-    <option name="LAST_COMMIT_MESSAGE" value="ip get, logrus added" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="496" y="309" key="Vcs.Push.Dialog.v2" timestamp="1608019899797">
-      <screen x="0" y="25" width="1792" height="1095" />
-    </state>
-    <state x="496" y="309" key="Vcs.Push.Dialog.v2/0.25.1792.1095@0.25.1792.1095" timestamp="1608019899797" />
+    <MESSAGE value="multiwriter applied to logrus" />
+    <MESSAGE value="logrus output ApiWriter made" />
+    <option name="LAST_COMMIT_MESSAGE" value="logrus output ApiWriter made" />
   </component>
 </project>
